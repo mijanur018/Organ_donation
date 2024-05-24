@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Organ Donation Website Tempalte </title>
+  <link rel="shortcut icon" href="public/images/fav.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="shortcut icon" href="public/images/fav.jpg">
+  <link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="public/plugins/testimonial/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="public/plugins/testimonial/css/owl.theme.min.css">
+  <link rel="stylesheet" href="public/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+  <link rel="stylesheet" href="public/css/organization.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="public/css/donater_main_page.css">
+  <link rel="stylesheet" href="public/css/swiper-bundle.min.css">
+</head>
+
+<body id="body">
+  <div class="dummy"></div>
+  <header id="menu-jk" class="header-container">
+    <div class="header-row row">
+      <div class="col-md-3 logocol">
+        <img src="public/images/others/logo.jpg" alt="">
+        <a class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+      <div id="navbarNavDropdown" class="col-md-12 d-none d-md-block navcol">
+        <ul>
+          <li>
+            <h5><b><a href="/">Home</a>
+          </li></b></h5>
+          <li>
+            <h5><b><a href="/donater_login">Donater</a>
+          </li></b></h5>
+          <li>
+            <h5><b><a href="/org_login">Organization</a>
+          </li></b></h5>
+          <li>
+            <h5><b><a href="/services">Services</a>
+          </li></b></h5>
+          <li>
+            <h5><b><a href="/aboutus">About Us</a>
+          </li></b></h5>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!--  ************************* Page Title Starts Here ************************** -->
+
+  <div class="page-nav no-margin row" id="navigation">
+    <div class="direction">
+      <div class="row">
+
+        <ul>
+          <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
+          <li><i class="fas fa-angle-double-right"></i>Donater Login</li>
+          <li><i class="fas fa-angle-double-right"></i>Donate Organ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--  ************************* donater main page Start Here ************************** -->
+
+  <div class="slide-container swiper" id="top">
+    <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper">
+        <% for (var i=0; i<data.length; i++){ %>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="public/images/others/organization_design.jpg" alt="" class="card-img">
+              
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name"><%= data[i].name %></h2>
+            <h4 class="description">Address : <%= data[i].city %></h4>
+            <h4 class="description">Collect Organ: <%= data[i].organ %></h4>
+            <h4 class="description">Contact No: <%= data[i].contact_no %></h4>
+
+
+          </div>
+        </div>
+        <%}%>
+      </div>
+    </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+
+
+  </div>
+  <div class="donation_button_divition" id="apply_for_donation_divition">
+    <button type="button" id="apply_button" class="apply_for_donation_button" onclick="showhide(1)">Apply For
+      Donation</button>
+  </div>
+
+  <div class="bg_color" id="bg">
+    <section class="org_container">
+      <header>DONATOR DETAILS</header>
+      <!-- <form action="#" class="form"> -->
+      <form class="form" action="/donater_main_page" method="post">
+        <div class="column">
+          <div class="input-box">
+            <label>Height(ft) *</label>
+            <input type="number"name="height" placeholder="Enter Height" required />
+          </div>
+          <div class="input-box">
+            <label>Weight(kg) *</label>
+            <input type="number"name="weight"placeholder="Enter Weight" required />
+          </div>
+        </div>
+        <div class="input-box ">
+          <label>Blood Group *</label>
+          <div class="column">
+            <div class="select-box">
+              <select name="blood_group">
+                <option hidden>Blood Group</option>
+                <option>A+</option>
+                <option>B+</option>
+                <option>A-</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Do you have any known allergies? If yes, then please specify below. *</label>
+            <input type="text"name="allergies"placeholder="Have Any Allegies" required />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Are you currently taking medications? If yes, then please list the medications and the reasons why
+              are you taking them. *</label>
+            <input type="text"name="medication_profile" placeholder="......" required />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>What is your current medical condition? Do you have any communicable disease, cardiovascular
+              problems, diabetes, asthma etc.? *</label>
+            <input type="text"name="health_status" placeholder="......" required />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Previous hospitalization (Provide the reason and treatment) *</label>
+            <input type="text"name="hospitalization" placeholder="......" required />
+          </div>
+        </div>
+
+         <div class="input-box ">
+          <label>Family History Illnesses *</label>
+          <div class="check_box" >
+            <div class="check_item"><input type="checkbox" name="medical_history"value="Cardiovascular Disease" />
+              <div class="label-div"><label>Cardiovascular Disease</label></div>
+            </div>
+            <div class="check_item"><input type="checkbox"name="medical_history"value="Diabetes Mellitus" />
+              <div class="label-div"><label>Diabetes Mellitus</label></div>
+            </div>
+            <div class="check_item"><input type="checkbox"name="medical_history" value="Hypertension" />
+              <div class="label-div"><label>Hypertension</label></div>
+            </div>
+            <div class="check_item"><input type="checkbox" name="medical_history"value="Tuberculosis" />
+              <div class="label-div"><label>Tuberculosis</label></div>
+            </div>
+            <div class="check_item"><input type="checkbox"name="medical_history" value="Asthma" />
+              <div class="label-div"><label>Asthma</label></div>
+            </div>
+            <div class="check_item"><input type="checkbox"name="medical_history" value="None" />
+              <div class="label-div"><label>None</label></div>
+            </div>
+            <div class="input-box">
+              <label>Other</label>
+              <input type="text"name="medical_history"placeholder="Other" />
+            </div>
+          </div>
+
+          <div class="input-box ">
+            <label>Specific Purpose *</label>
+            <div class="check_box">
+              <div class="check_item"><input type="checkbox" name="purpose"value="Medical Transplant" />
+                <div class="label-div"><label>Medical Transplant</label></div>
+              </div>
+              <div class="check_item"><input type="checkbox"name="purpose" value="Educational/Research" />
+                <div class="label-div"><label>Educational/Research</label></div>
+              </div>
+              <div class="check_item"><input type="checkbox"name="purpose" value="Medical Transplant & Educational/Research" />
+                <div class="label-div"><label>Both</label></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Adhaar No. *</label>
+            <input type="text"name="adhaar_no" placeholder="Adhaar No." required />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Acknowledgment and Terms *</label>
+            <div class="check_box">
+              <div class="check-item">
+                <div class="check"><input type="checkbox"name="acknowledgment" value="yes i agree" /></div>
+                <div class="label-div"><label class="lab">I authorize the donation of my organs for medical transplant or educational/research purposes. I will inform my family about this decision, and I grant permission to submit my information to the donor registry. </label></div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="upload-photo">
+          <div class="label"><label>Signature *</label></div>
+          <div class="input-file">
+            <input type="file" name="file_name"id="file" value=" "/>
+          </div>
+        </div>
+        <input type="submit" value="Complete" id="submit">
+        
+        <!-- <button onclick="showhide(2)">Submit </button> -->
+      </form> 
+    </section>
+  </div>
+
+  <div class="popup-main" id="popup">
+    <div class="demo">
+      <div class="cross-div" onclick="showhide(3)">
+          <img src="public/images/others/cross.png" onclick="redirectToPage()">
+        </div>
+        <div class="message-div"> 
+          <p><b><i> Thank you for giving your organ.</i></b></p>
+      </div>
+    </div>
+  </div>
+
+  
+  <!--  ************************* Footer Start Here ************************** -->
+
+  <footer class="footer" id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Our organ donation services encompass seamless registration,compassionate support,and life-saving coordination. We're committed to facilitating the selfless act of donation, giving hope and a second chance to those in need.
+                    </p>
+                    <p>We focus on technologies that promise to reduce costs, streamline processes and speed
+                        time-to-market, Backed by our strong quality processes and rich experience managing global...
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <h2>Useful Links</h2>
+                  <ul class="list-unstyled link-list">
+                      <li><a ui-sref="Services" href="/services">Our services</a><i class="fa fa-angle-right"></i></li>
+                  <li><a ui-sref="about" href="/aboutus">About us</a><i class="fa fa-angle-right"></i></li>
+                  </ul>
+              </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        Organ developer team fiem <a href="http://" br>
+                            Kolkata, <br>
+                            700050
+                            Phone: +91 7477688521 <br>
+                            Email: <a href="chayanjanaofficial@gmail.com" class="">chayanjanaofficial@gmail.com</a><br>
+                            
+                    </address>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <div class="copy" id="footer-down">
+        <div class="container">
+            <a href="">2023 &copy; All Rights Reserved | Designed and Developed by Chayan's
+                Entire Team</a>
+
+                
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script src="public/js/jquery-3.2.1.min.js"></script>
+<script src="public/js/popper.min.js"></script>
+<script src="public/js/bootstrap.bundle.min.js"></script>
+<script src="public/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="public/plugins/testimonial/js/owl.carousel.min.js"></script>
+<script src="public/js/script.js"></script>
+<script src="public/js/donater_login.js"></script>
+<script src="public/js/D_script.js"></script>
+
+
+</html>

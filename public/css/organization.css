@@ -1,0 +1,169 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#nav{
+    margin-left: 0%;
+}
+.page-nav {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 0%;
+    background-size: 100%;
+    text-align: center;
+}
+.organization_main_container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.organization_container{
+    width: 70vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "login";
+    border-radius: 20px;
+}
+
+.design_container{
+    grid-area: design;
+    display: none;
+    margin-right: 40px;
+}
+.design_container img{
+    height: 100%;
+    width: 100%;
+}
+
+.login_container{
+    /* background: lightblue; */
+    grid-area: login;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #9a9a9a;
+    margin-left: 40px;
+}
+
+.login_container h2 .title{
+    margin: 15px 0;
+}
+
+#email_input{
+    margin-top: 40px;
+}
+
+.text_input{
+    background: #fff;
+    height: 40px;
+    display: flex;
+    width: 60%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 5px 0;
+    box-shadow: 5px 5px 10px #9a9a9a;
+}
+
+.text_input input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    /* padding-top: 30px; */
+}
+
+.text_input i{
+    color: #3461e9;
+}
+
+.text_input ::placeholder{
+    color: #c8c3c3;
+}
+
+#show_password{
+    cursor: pointer;
+}
+#hide_password{
+    cursor: pointer;
+    display: none;
+}
+
+.forget_password{
+    padding-right: 0%;
+    margin-top: 15px;
+}
+.forget_password u{
+    color: rgb(19, 129, 33);
+}
+
+.login_btn{
+    width: 50%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: rgb(89, 115, 233);
+    margin-top: 40px;
+    
+}
+.login{
+    width: 100%;
+    text-align: center;
+}
+.login_btn a{
+    color: #fff;
+}
+
+.login_container a{
+    font-size: 15px;
+    color: #9a9a9a;
+    cursor: pointer;
+    user-select: none;
+}
+.register{
+    margin-top: 100px;
+    /* margin-bottom: 10px; */
+}
+.register u{
+    color: rgb(19, 129, 33);
+}
+#submit{
+    background-color:rgb(29, 62, 173);
+    color: rgb(254, 254, 254);
+}
+#submit{
+
+    border: none;
+    background-color:rgb(66, 68, 158);
+    color: rgb(254, 254, 254);
+    text-align: center;
+    width:80%;
+    margin: 0 auto;
+    display: block; 
+    border-radius: 10px; 
+    padding: 10px 20px;
+    margin-top: 30px; 
+}
+
+
+@media (min-width:768px){
+    .organization_container{
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "design login";
+    }
+    .design_container{
+        display: block;
+    }
+}

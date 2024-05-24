@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Organ Donation Website Tempalte </title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="public/plugins/testimonial/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="public/plugins/testimonial/css/owl.theme.min.css">
+    <link rel="stylesheet" href="public/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <link rel="stylesheet" href="public/css/organization.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="dummy"></div>
+    <header id="menu-jk" class="header-container">
+        <!-- <div class="container"> -->
+        <div class="header-row row">
+            <div class="col-md-3 logocol">
+                <img src="public/images/others/logo.jpg" alt="">
+                <a class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <div id="navbarNavDropdown" class="col-md-12 d-none d-md-block navcol">
+                <ul>
+                    <li>
+                        <h5><b><a href="/">Home</a>
+                    </li></b></h5>
+                    <li>
+                        <h5><b><a href="/donater_login">Donater</a>
+                    </li></b></h5>
+                    <li>
+                        <h5><b><a href="/org_login">Organization</a>
+                    </li></b></h5>
+                    <li>
+                        <h5><b><a href="/services">Services</a>
+                    </li></b></h5>
+                    <li>
+                        <h5><b><a href="/aboutus">About Us</a>
+                    </li></b></h5>
+                </ul>
+            </div>
+        </div>
+        <!-- </div> -->
+    </header>
+
+    <!--  ************************* Page Title Starts Here ************************** -->
+
+    <div class="page-nav no-margin row">
+        <div class="container" id="nav">
+            <div class="row">
+                <ul>
+                    <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><i class="fas fa-angle-double-right"></i>Organization Login</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  ************************* Organization Start Here ************************** -->
+    <div class="organization_main_container">
+        <div class="organization_container">
+            <div class="design_container">
+                <!-- <h1>disign area</h1> -->
+                <img src="public/images/others/organization_design.jpg">
+
+            </div>
+            <form method="post" action="/org_login">
+            <div class="login_container">
+                <h2 class="title">Organization Login</h2>
+                <div class="text_input" id="email_input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email"placeholder="Email Address">
+                </div>
+                <div class="text_input">
+                    <i class="fa-solid fa-lock-open"></i>
+                    <input type="password" placeholder="Password" name="password"id="password">
+                    <span onclick="password()">
+                        <i class="fa-solid fa-eye" id="show_password"></i>
+                        <i class="fa-solid fa-eye-slash" id="hide_password"></i>
+                    </span>
+                </div>
+                <a href="#" class="forget_password"><u>Forget Password</u></a>
+                <div class="login">
+                    <a href="/organization_main_page">
+                        <button class="login_btn">Login</button>
+                    </a>
+                </div>
+                <div class="register">
+                    <p>New User <a href="/organ_reg"><u>Register</u></a></p>
+
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--  ************************* Footer Start Here ************************** -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Our organ donation services encompass seamless registration,compassionate support,and life-saving coordination. We're committed to facilitating the selfless act of donation, giving hope and a second chance to those in need.
+                    </p>
+                    <p>We focus on technologies that promise to reduce costs, streamline processes and speed
+                        time-to-market, Backed by our strong quality processes and rich experience managing global...
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h2>Useful Links</h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a ui-sref="Services" href="/services">Our services</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="about" href="/aboutus">About us</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        Organ developer team fiem <a href="http://" br>
+                            Kolkata, <br>
+                            700050
+                            Phone: +91 7477688521 <br>
+                            Email: <a href="chayanjanaofficial@gmail.com" class="">chayanjanaofficial@gmail.com</a><br>
+                    </address>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <div class="copy">
+        <div class="container">
+            <a href="https://www.smarteyeapps.com/">2023 &copy; All Rights Reserved | Designed and Developed by Chayan's
+                Entire Team</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+            </span>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script src="public/js/jquery-3.2.1.min.js"></script>
+<script src="public/js/popper.min.js"></script>
+<script src="public/js/bootstrap.bundle.min.js"></script>
+<script src="public/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="public/plugins/testimonial/js/owl.carousel.min.js"></script>
+<script src="public/js/script.js"></script>
+<script src="public/js/donater_login.js"></script>
+
+
+</html>
